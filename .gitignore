@@ -1,2 +1,3 @@
 neo4j/logs/
 .ipynb_checkpoints
+/00_old_dblp_stuff/
