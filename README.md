@@ -17,3 +17,16 @@ The expected result is a container up (check it with `docker ps`) and a log of t
 This indicates that Neo4j is already running and its interface can be accessed through localhost:7474.
 
 We are not using any username nor password (hence the flag `NEO4J_AUTH=none`).
+
+# Tests
+
+## An Author cannot review its own paper
+
+```cypher
+MATCH (a:Author)-[:Wrote]->(p:Paper)
+WITH a, p
+MATCH (a)-[:Reviewed]->(p)
+RETURN *;
+```
+
+Expected result: empty.
