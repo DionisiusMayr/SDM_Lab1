@@ -18,5 +18,5 @@ docker run \
     -e NEO4J_apoc_export_file_enabled=true \
     -e NEO4J_apoc_import_file_enabled=true \
     -e NEO4J_apoc_import_file_use__neo4j__config=true \
-    -e NEO4J_PLUGINS=\[\"apoc-extended\"\] \
+    -e NEO4J_PLUGINS=\[\"graph-data-science\"\] \
     neo4j:5.17.0-community-bullseye
